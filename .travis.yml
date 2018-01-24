@@ -20,5 +20,5 @@ before_install:
 script:
 - sfdx force:org:create -v salesforce-ci-test -s -f config/project-scratch-def.json -a ciorg
 - sfdx force:source:push -u ciorg
-- sfdx force:apex:test:run -u ciorg -c -r human
+- sfdx force:apex:test:run -u ciorg -c -r human --wait --testlevel RunLocalTests
 - sfdx force:org:delete -u ciorg -p
