@@ -16,6 +16,6 @@ public with sharing class OpportunityTestTriggerTest {
 
 		Test.stopTest();
 
-		System.assertEquls('test', [SELECT Test_Field__c FROM Opportunity WHERE Id = :o.Id].Test_Field__c);
+		System.assertEquals('test', [SELECT Test_Field__c FROM Opportunity WHERE Id = :o.Id].Test_Field__c);
 	}
 }
